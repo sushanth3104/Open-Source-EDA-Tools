@@ -4,7 +4,7 @@ set -e
 BASE_DIR="$HOME/Open-Source-EDA-Tools"
 TOOLS_DIR="$BASE_DIR/tools"
 
-echo "🚀 Installing dependencies for Yosys..."
+echo "Installing dependencies for Yosys..."
 sudo apt-get install -y \
     build-essential clang lld bison flex libfl-dev \
     libreadline-dev gawk tcl-dev libffi-dev git \
