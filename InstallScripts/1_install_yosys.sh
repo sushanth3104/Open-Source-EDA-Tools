@@ -28,7 +28,9 @@ else
 fi
 
 echo "====> Building Yosys..."
+
 cd "$TOOLS_DIR/yosys"
+
 make -j"$(nproc)"
 
 echo "====> Installing Yosys..."
