@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-BASE_DIR="$HOME/open-eda-setup"
+BASE_DIR="$HOME/Open_Source-EDA-Tools"
 TOOLS_DIR="$BASE_DIR/tools"
 
 echo "🚀 Installing dependencies for Yosys..."
