@@ -2,12 +2,12 @@
 set -e
 
 # Base project directory in home
-BASE_DIR="$HOME/open-eda-setup"
+BASE_DIR="$HOME/Open-Source-EDA-Tools"
 SCRIPTS_DIR="$BASE_DIR/scripts"
 TOOLS_DIR="$BASE_DIR/tools"
 DOCS_DIR="$BASE_DIR/docs"
 
-echo "🚀 Setting up folder structure at $BASE_DIR ..."
+echo "Setting up folder structure at $BASE_DIR ..."
 mkdir -p "$SCRIPTS_DIR" "$TOOLS_DIR" "$DOCS_DIR"
 
 # Update package lists
