@@ -2,7 +2,7 @@
 set -e
 
 # Base repo location
-BASE_DIR="$HOME/Open_source-EDA-Tools"
+BASE_DIR="$HOME/Open-source-EDA-Tools"
 TOOLS_DIR="$BASE_DIR/tools"
 
 echo "Cloning or updating OpenSTA in $TOOLS_DIR ..."
