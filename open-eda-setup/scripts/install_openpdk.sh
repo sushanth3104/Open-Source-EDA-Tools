@@ -35,3 +35,7 @@ sudo make
 sudo make install
 
 echo "open_pdks installed. Default location is /usr/local/share/pdk unless PDK_PREFIX was set."
+
+
+#integrate sky130 to magic 
+sudo ln -s /usr/local/share/pdk/sky130A/libs.tech/magic/* /usr/local/lib/magic/sys
