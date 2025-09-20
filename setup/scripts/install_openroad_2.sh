@@ -21,7 +21,7 @@ sudo ./etc/DependencyInstaller.sh -all
 echo "Building OpenROAD..."
 mkdir -p build && cd build
 cmake ..
-make -j"$(nproc)"
+make 
 
 echo "Installing OpenROAD..."
 sudo make install
