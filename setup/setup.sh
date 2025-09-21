@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -euo pipefail
 
 # Repo paths
 REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -8,6 +7,9 @@ SCRIPTS_DIR="$REPO_DIR/scripts"
 echo "Updating apt repositories..."
 sudo apt-get update
 sudo apt-get upgrade -y
+
+echo "Installing Git.."
+sudo apt-get install git -y
 
 
 if [[ ! -d "$SCRIPTS_DIR" ]]; then

@@ -7,7 +7,7 @@ TOOLS_DIR="$BASE_DIR/tools"
 
 echo "Installing dependencies for open_pdks..."
 sudo apt-get update
-sudo apt-get install -y build-essential git tcl-dev
+
 
 echo "Cloning or updating open_pdks in $TOOLS_DIR ..."
 cd "$TOOLS_DIR"
