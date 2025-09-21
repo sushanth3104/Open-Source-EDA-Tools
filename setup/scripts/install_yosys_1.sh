@@ -21,9 +21,13 @@ else
     cd yosys && git pull && cd ..
 fi
 
+echo "Building BISON..."
+cd "$TOOLS_DIR"
 wget http://ftp.gnu.org/gnu/bison/bison-3.6.tar.gz
 tar -xvzf bison-3.6.tar.gz
+rm -rf bison-3.6.tar.gz
 cd bison-3.6
+
 
 ./configure --prefix=/usr/local
 make -j"$(nproc)"
