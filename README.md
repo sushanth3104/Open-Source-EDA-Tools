@@ -15,13 +15,14 @@ It is designed for students, researchers, and professionals who want a quick and
 
 ## 🔧 Prerequisites
 Before installing, make sure you have:
-- **Operating System**: Ubuntu 20.04 / 22.04 LTS (recommended)  
+- **Operating System**
+  - Ubuntu 20.04 or later 
+  - If you wish to use WSL, make sure to have a PC with RAM > 8GB
+  - Standalone Ubuntu installation is preferred
 - **Packages**:
-  ```bash
-  sudo apt-get update
-  sudo apt-get install -y build-essential git make cmake       tcl-dev tk-dev python3 python3-pip       libx11-dev libxpm-dev libxft-dev libxext-dev       bison flex libreadline-dev gawk
-  ```
-- **Disk space**: ~10 GB free  
+  All additional packages will be installed by running the scipts in the given order.
+  
+- **Disk space**: ~20 GB free  
 - **Internet connection**: Required to fetch source packages  
 
 ---
@@ -31,20 +32,24 @@ Before installing, make sure you have:
 Clone this repository:
 ```bash
 git clone https://github.com/sushanth3104/Open-Source-EDA-Tools.git
-cd Open-Source-EDA-Tools/open-eda-setup
+cd Open-Source-EDA-Tools/setup
 ```
 
-Run the setup script to install all tools:
+Run the setup script to install all tools: Not preferred - Hard to debug if installation fails 
 ```bash
 chmod +x setup.sh
 ./setup.sh
 ```
 
-You can also install tools individually by navigating to their respective folders and running:
+- You can also install tools individually by navigating scripts folders and running: (Preferred way)
+- Make sure to install the packages in the numbering order
 ```bash
-chmod +x install.sh
-./install.sh
+cd Open-Source-EDA-Tools/setup/scripts
+chmod +x install_*****.sh
+./install_*****..sh
 ```
+
+By default all tools will be installed in tools directory(Open-Source-EDA-Tools/tools/)
 
 ---
 
@@ -52,15 +57,25 @@ chmod +x install.sh
 ```
 Open-Source-EDA-Tools/
 │
-├── open-eda-setup/        # Installation scripts for tools
+├── tools/                 # After installation 
 │   ├── yosys/             # Logic synthesis
 │   ├── openroad/          # P&R and timing
 │   ├── magic/             # Layout editor
-│   ├── netgen/            # LVS tool
+│   ├── Surfer/            # Simulation viewer 
+│   ├── Icarus Verilog/    # Verilog simulator
 │   ├── open_pdks/         # Open PDKs (Sky130, etc.)
 │   └── ...
-│
-├── setup.sh               # Script to install all tools sequentially
+├── setup/        # Installation scripts for tools
+│   ├── setup.sh  # For automatic installation                 
+│   ├── scripts   # Script to install tools manually
+│       ├── install_yosys_1.sh
+│       ├── install_openroad_2.sh
+│       ├── install_icarus_verilog_3.sh
+│       ├── install_magic_4.sh
+│       ├── install_openpdk_5.sh
+│       ├── install_surfer_6.sh
+│       └─ ...
+├
 └── README.md              # Project documentation
 ```
 
@@ -70,8 +85,9 @@ Open-Source-EDA-Tools/
 - **Yosys** – Logic Synthesis  
 - **OpenROAD** – RTL-GDS flow (includes OpenSTA)  
 - **Magic** – Layout Editor  
-- **Netgen** – LVS comparison  
+- **Surfer** - Simulation viewer 
 - **OpenPDKs** – SkyWater & other PDKs  
+- **Icarus Verilog** - Verilog simulator
 - **Others** (depending on selection)
 
 ---
@@ -103,7 +119,7 @@ Contributions are welcome!
 
 ## 📜 License
 This project is open-sourced under the **MIT License**.  
-Please check individual tools’ licenses in their repositories.
+Please check individual tool's licenses in their repositories.
 
 ---
 
