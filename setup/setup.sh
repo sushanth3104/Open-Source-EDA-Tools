@@ -21,12 +21,10 @@ fi
 ORDER=(
   "install_yosys_1.sh"
   "install_openroad_2.sh"
-  "install_opensta_3.sh"
-  "install_gtkwave_4.sh"
-  "install_icarus_verilog_5.sh"
-  "install_magic_6.sh"
-  "install_openpdk_7.sh"
-  "install_surfer_8.sh"
+  "install_icarus_verilog_3.sh"
+  "install_magic_4.sh"
+  "install_openpdk_5.sh"
+  "install_surfer_6.sh"
 )
 
 # Optional: do apt-get update once up front (comment out if each script already does it)
