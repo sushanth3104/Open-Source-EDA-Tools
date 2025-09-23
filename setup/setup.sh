@@ -25,6 +25,7 @@ ORDER=(
   "install_magic_4.sh"
   "install_openpdk_5.sh"
   "install_surfer_6.sh"
+  "install_vscode_7.sh"
 )
 
 # Optional: do apt-get update once up front (comment out if each script already does it)

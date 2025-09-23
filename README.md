@@ -62,7 +62,6 @@ Open-Source-EDA-Tools/
 │   ├── openroad/          # P&R and timing
 │   ├── magic/             # Layout editor
 │   ├── Surfer/            # Simulation viewer 
-│   ├── Icarus Verilog/    # Verilog simulator
 │   ├── open_pdks/         # Open PDKs (Sky130, etc.)
 │   └── ...
 ├── setup/        # Installation scripts for tools
@@ -74,6 +73,7 @@ Open-Source-EDA-Tools/
 │       ├── install_magic_4.sh
 │       ├── install_openpdk_5.sh
 │       ├── install_surfer_6.sh
+│       ├── install_vscode_7.sh
 │       └─ ...
 ├
 └── README.md              # Project documentation
@@ -88,23 +88,13 @@ Open-Source-EDA-Tools/
 - **Surfer** - Simulation viewer 
 - **OpenPDKs** – SkyWater & other PDKs  
 - **Icarus Verilog** - Verilog simulator
+- **VScode**  - Code editor and directory viewer
 - **Others** (depending on selection)
 
 ---
 
 ## ✅ Usage Example
-After installation, tools will be available globally. For example:
-```bash
-yosys -V
-openroad -exit
-magic -d XR
-```
 
-To verify:
-```bash
-which yosys
-which openroad
-```
 
 ---
 
