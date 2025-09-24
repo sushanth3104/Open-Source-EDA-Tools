@@ -27,8 +27,8 @@ module test_design_tb;
     end
 
     initial begin
-        $dumpvars(0,tb);
         $dumpfile("sim.vcd");
+        $dumpvars(0,test_design_tb);
 
     end
 

@@ -1,0 +1,30 @@
+#read design
+read_verilog ../../RTL/design/test_design.v 
+
+#elaborate design hierarchy 
+hierarchy -check -top test_design
+
+#process,fsm and Memory
+proc; opt; fsm; opt; memory; opt
+
+#resource sharing 
+share -aggressive
+
+#mapping to internal cell library(generic cells)
+techmap; opt
+
+#cleanup : remove any unsused wires
+clean
+
+#mapping flip-flops to sky130 standard cells(flip-flop)
+dfflibmap -liberty ../../../tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+#mapping generic gates to sky130 standard cells(combinational)
+abc -liberty ../../../tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+#write synthesized design
+write_verilog -noattr -noexpr -nohex -nodec ./Netlist/test_design_synt.v 
+
+#provide stats of synthesis
+stat -liberty ../../../tools/open_pdks/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
